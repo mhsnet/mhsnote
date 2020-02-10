@@ -1,4 +1,4 @@
-# [《MHS 笔记》] > [《Homebrew使用》]
+# [《MHS笔记》] > [《Homebrew使用》]
 
 ## 使用
 ```
@@ -29,6 +29,6 @@ $ brew doctor
 ```
 
 ## 
-[《MHS 笔记》]: https://mhsnet.github.io/mhsnote/ "《MHS 笔记》"
+[《MHS笔记》]: https://mhsnet.github.io/mhsnote/ "《MHS笔记》"
 
 [《Homebrew使用》]: https://mhsnet.github.io/mhsnote/os/mac/homebrew/index.html "《Homebrew使用》"
