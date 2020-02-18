@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>index.md</title>
+<title>usestate.md</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
 <style>
@@ -421,50 +421,55 @@ void 0!==arguments[0]&&(br.sequenceConfig=arguments[0]),e=arguments[1]):e=argume
           : 'default'
     });
   </script>
-<h1 id="%E3%80%8Amhs%E7%AC%94%E8%AE%B0%E3%80%8B-%E3%80%8Ahomebrew%E4%BD%BF%E7%94%A8%E3%80%8B"><a href="https://mhsnet.github.io/mhsnote/" title="《MHS笔记》">《MHS笔记》</a> &gt; <a href="https://mhsnet.github.io/mhsnote/os/mac/homebrew/index.html" title="《Homebrew使用》">《Homebrew使用》</a></h1>
-<h2 id="%E4%BD%BF%E7%94%A8">使用</h2>
-<pre class="hljs"><code><div># 查询可用包
-$ brew search &lt;pkg&gt;
-# 查看包信息
-$ brew info &lt;pkg&gt;
-# 安装包
-# 例：$ brew install node@12
-$ brew install &lt;pkg&gt;
-# 删除包
-$ brew uninstall &lt;pkg&gt;
-# 设置链接
-# 例：brew link --overwrite -f node@12
-$ brew link &lt;pkg@n&gt;
-# 删除链接
-$ brew unlink &lt;pkg@n&gt;
-# 已安装列表
-$ brew list
-# 帮助信息
-$ brew -h
-# 查看Homebrew版本
-$ brew -v
-# 更新Homebrew
-$ brew update
-# 体检
-$ brew doctor
+<h1 id="%E3%80%8Amhs-%E7%AC%94%E8%AE%B0%E3%80%8B-usestate"><a href="https://mhsnet.github.io/mhsnote/" title="《MHS 笔记》">《MHS 笔记》</a> &gt; <a href="https://mhsnet.github.io/mhsnote/framework/react/doc/hooks-usestate.html" title="useState">useState</a></h1>
+<h2 id="usestate">useState</h2>
+<pre class="hljs"><code><div># 返回状态和更新状态函数 
+# state --- 状态（更新[obj,arr] - 替换非合并）
+# setState --- 更新状态函数
+# initialState --- state初始值
+const [state, setState] = useState(initialState);
 </div></code></pre>
-<h2 id="%E6%9B%BF%E6%8D%A2%E6%BA%90">替换源</h2>
-<pre class="hljs"><code><div>$ git -C &quot;$(brew --repo)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+<h2 id="%E4%BD%BF%E7%94%A8setstate">使用setState</h2>
+<blockquote>
+<ol>
+<li>例</li>
+</ol>
+</blockquote>
+<pre class="hljs"><code><div># App.tsx
+import React, { useState } from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
-$ git -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+export default function App() {
+  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(()=&gt;{
+  //   return 0;
+  // });
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text&gt;点击{count}次&lt;/Text&gt;
+      &lt;Button title=&quot;点击&quot; onPress={() =&gt; setCount(count + 1)} /&gt;
+    &lt;/View&gt;
+  );
+}
 
-$ git -C &quot;$(brew --repo homebrew/cask)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
-
-$ brew update
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 </div></code></pre>
-<h2 id="%E6%81%A2%E5%A4%8D%E6%BA%90">恢复源</h2>
-<pre class="hljs"><code><div>$ git -C &quot;$(brew --repo)&quot; remote set-url origin https://github.com/Homebrew/brew.git
-
-$ git -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://github.com/Homebrew/homebrew-core.git
-
-$ git -C &quot;$(brew --repo homebrew/cask)&quot; remote set-url origin https://github.com/Homebrew/homebrew-cask.git
-
-$ brew update
+<blockquote>
+<ol start="2">
+<li>函数组件中使用，可替类</li>
+</ol>
+</blockquote>
+<pre class="hljs"><code><div># 使用1
+const Example = (props) =&gt; {}
+# 使用2
+function Example(props) {}
 </div></code></pre>
 <h2 id=""></h2>
 

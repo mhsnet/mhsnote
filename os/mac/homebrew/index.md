@@ -28,6 +28,28 @@ $ brew update
 $ brew doctor
 ```
 
+## 替换源
+```
+$ git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+
+$ git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+
+$ git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
+
+$ brew update
+```
+
+## 恢复源
+```
+$ git -C "$(brew --repo)" remote set-url origin https://github.com/Homebrew/brew.git
+
+$ git -C "$(brew --repo homebrew/core)" remote set-url origin https://github.com/Homebrew/homebrew-core.git
+
+$ git -C "$(brew --repo homebrew/cask)" remote set-url origin https://github.com/Homebrew/homebrew-cask.git
+
+$ brew update
+```
+
 ## 
 [《MHS笔记》]: https://mhsnet.github.io/mhsnote/ "《MHS笔记》"
 

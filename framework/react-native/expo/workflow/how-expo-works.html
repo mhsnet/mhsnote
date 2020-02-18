@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>index.md</title>
+<title>how-expo-works.md</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
 <style>
@@ -421,52 +421,33 @@ void 0!==arguments[0]&&(br.sequenceConfig=arguments[0]),e=arguments[1]):e=argume
           : 'default'
     });
   </script>
-<h1 id="%E3%80%8Amhs%E7%AC%94%E8%AE%B0%E3%80%8B-%E3%80%8Ahomebrew%E4%BD%BF%E7%94%A8%E3%80%8B"><a href="https://mhsnet.github.io/mhsnote/" title="《MHS笔记》">《MHS笔记》</a> &gt; <a href="https://mhsnet.github.io/mhsnote/os/mac/homebrew/index.html" title="《Homebrew使用》">《Homebrew使用》</a></h1>
-<h2 id="%E4%BD%BF%E7%94%A8">使用</h2>
-<pre class="hljs"><code><div># 查询可用包
-$ brew search &lt;pkg&gt;
-# 查看包信息
-$ brew info &lt;pkg&gt;
-# 安装包
-# 例：$ brew install node@12
-$ brew install &lt;pkg&gt;
-# 删除包
-$ brew uninstall &lt;pkg&gt;
-# 设置链接
-# 例：brew link --overwrite -f node@12
-$ brew link &lt;pkg@n&gt;
-# 删除链接
-$ brew unlink &lt;pkg@n&gt;
-# 已安装列表
-$ brew list
-# 帮助信息
-$ brew -h
-# 查看Homebrew版本
-$ brew -v
-# 更新Homebrew
-$ brew update
-# 体检
-$ brew doctor
+<h1 id="%E3%80%8Amhs-%E7%AC%94%E8%AE%B0%E3%80%8B-expo%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C">[《MHS 笔记》] &gt; <a href="https://mhsnet.github.io/mhsnote/framework/react-native/expo/workflow/how-exop-works.html" title="Expo如何工作">Expo如何工作</a></h1>
+<h2 id="%E4%BB%8B%E7%BB%8D%EF%BC%9A">介绍：</h2>
+<ol>
+<li>本地开发应用</li>
+<li>发布/部署应用生产版本</li>
+<li></li>
+</ol>
+<h2 id="1-%E5%AE%89%E8%A3%85xcode">1. 安装Xcode</h2>
+<blockquote>
+<p>App Store安装</p>
+</blockquote>
+<h2 id="2-%E5%AE%89%E8%A3%85xcode%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7">2. 安装Xcode命令行工具</h2>
+<pre class="hljs"><code><div>Xcode-&gt;Preferences-&gt;Locations
 </div></code></pre>
-<h2 id="%E6%9B%BF%E6%8D%A2%E6%BA%90">替换源</h2>
-<pre class="hljs"><code><div>$ git -C &quot;$(brew --repo)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
-
-$ git -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
-
-$ git -C &quot;$(brew --repo homebrew/cask)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
-
-$ brew update
-</div></code></pre>
-<h2 id="%E6%81%A2%E5%A4%8D%E6%BA%90">恢复源</h2>
-<pre class="hljs"><code><div>$ git -C &quot;$(brew --repo)&quot; remote set-url origin https://github.com/Homebrew/brew.git
-
-$ git -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://github.com/Homebrew/homebrew-core.git
-
-$ git -C &quot;$(brew --repo homebrew/cask)&quot; remote set-url origin https://github.com/Homebrew/homebrew-cask.git
-
-$ brew update
-</div></code></pre>
+<h2 id="3-%E5%B0%9D%E8%AF%95">3. 尝试</h2>
+<p>https://d1ahtucjixef4r.cloudfront.net/Exponent-2.14.0.apk</p>
+<h2 id="%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">操作系统</h2>
+<ul>
+<li>Mac
+<ol>
+<li>[《Homebrew使用》]</li>
+<li>[《mariadb使用》]</li>
+</ol>
+</li>
+</ul>
 <h2 id=""></h2>
+<p>[《MHS 笔记》] : https://mhsnet.github.io/mhsnote/ &quot;《MHS 笔记》&quot;</p>
 
 </body>
 </html>
